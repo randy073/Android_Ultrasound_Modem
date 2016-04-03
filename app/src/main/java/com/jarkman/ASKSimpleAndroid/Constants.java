@@ -22,7 +22,7 @@ public interface Constants {
   public static final double kAmplitude = 0.125d; /* (1/8) */
 
   // Sampling frequency (number of sample values per second)
-  public static final double kSamplingFrequency = 11025; //rps - reduced to 11025 from 22050 
+  public static final double kSamplingFrequency = 44100; //rps - reduced to 11025 from 22050
   		// to enable the decoder to keep up with the audio on Motorola CLIQ  
 
   // Sound duration of encoded byte (in seconds)
@@ -38,15 +38,24 @@ public interface Constants {
   public static final int kDurationsPerKey = 3; 
 
   //The frequency used in the initial hail of the key
-  public static final int kHailFrequency = 3000;
+  public static final int kHailFrequency = 18500;
 
   //The frequencies we use for each of the 8 bits
-  public static final int[] kFrequencies = {1000,                       //1000
-					    (int)(1000 * (float)27/24), //1125
-					    (int)(1000 * (float)30/24), //1250
-					    (int)(1000 * (float)36/24), //1500 
-					    (int)(1000 * (float)40/24), //1666
-					    (int)(1000 * (float)48/24), //2000
-					    (int)(1000 * (float)54/24), //2250
-					    (int)(1000 * (float)60/24)};//2500
+//  public static final int[] kFrequencies = {1000,                       //1000
+//					    (int)(1000 * (float)27/24), //1125
+//					    (int)(1000 * (float)30/24), //1250
+//					    (int)(1000 * (float)36/24), //1500
+//					    (int)(1000 * (float)40/24), //1666
+//					    (int)(1000 * (float)48/24), //2000
+//					    (int)(1000 * (float)54/24), //2250
+//					    (int)(1000 * (float)60/24)};//2500
+
+    public static final int[] kFrequencies = {19000,                       //1000
+					    19125, //1125
+					    19250, //1250
+					    19500, //1500
+					    19666, //1666
+					    20000, //2000
+					    20250, //2250
+					    20500};//2500
 }

@@ -122,6 +122,8 @@ public class Decoder implements Constants {
 	    for(int j = 0; j < kBitsPerByte * kBytesPerDuration; j++){
 		signal[j][i] = 
 		    complexDetect(durationInput, Encoder.getFrequency(j));
+
+
 		/*
 		if (j == 0) 
 		  System.out.println("\nsignal[" + j + "][" + i + "]=" + signal [j][i]);
